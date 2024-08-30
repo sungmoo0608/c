@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $(".logo").click(function () {
+                //document.write("이미지 클릭 했습니다" + "<br>");
+                console.log('이미지를 클릭했습니다.');
+            });
+
+            $(".logo").mousedown(function () {
+                //document.write("이미지 클릭 했습니다" + "<br>");
+                console.log('마우스 다운 === 이미지를 클릭했습니다.');
+            });
+
+            $(".logo").mouseover(function () {
+                //document.write("이미지 클릭 했습니다" + "<br>");
+                console.log('마우스 오버 === 마우스 오버.');
+            });
+
+            $("#eDiv").click(function () {
+                //document.write("이미지 클릭 했습니다" + "<br>");
+                $("body").append($("#eDiv").clone());
+                console.log('이미지를 클릭했습니다.');
+            });
+
+        });
+
+
+
+    </script>
+    <style>
+        #eDiv {
+            width: 100px;
+            height: 100px;
+            background: #ff0000;
+            line-height: 100px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bolder;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="eDiv"> jQuery Event </div>
+    <!-- <hr>
+    <div>
+        <img class="logo" src="img/logo.png" alt="">
+    </div> -->
+
+
+</body>
+
+</html>
